@@ -1,0 +1,190 @@
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url("../fonts/PlusJakartaSans.ttf");
+}
+
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+$white: hsl(0, 0%, 100%);
+$very-light-grayish-blue: hsl(210, 60%, 98%);
+$light-grayish-blue-1: hsl(211, 68%, 94%);
+$light-grayish-blue-2: hsl(205, 33%, 90%);
+$grayish-blue: hsl(219, 14%, 63%);
+$dark-grayish-blue: hsl(219, 12%, 42%);
+$very-dark-blue: hsl(224, 21%, 14%);
+$very-dark-blue-tt: hsla(224, 21%, 14%, .03);
+
+* {
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans';
+    padding: 0;
+    margin: 0;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: $very-light-grayish-blue;
+}
+
+p {
+    font-size: 14px;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    color: $blue;
+    transition: font-weight .13s ease-in-out;
+    &:hover, &:focus {
+        font-weight: 800;
+    }
+}
+
+button, a {
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+}
+
+main {
+    .notifications-area {
+        background-color: $white;
+        padding: 30px 20px 15px;
+        max-width: 650px;
+        margin: 0 auto;
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            h1 {
+                font-size: 1.2rem;
+                color: $very-dark-blue;
+
+                .notification-badge {
+                    display: inline-block;
+                    background-color: $blue;
+                    padding: 2px 10px;
+                    border-radius: 6px;
+                    color: $white;
+                    font-size: .9rem;
+                    margin-left: 6px;
+                }
+            }
+            button {
+                border: none;
+                background: none;
+                color: $dark-grayish-blue;
+                font-size: 14px;
+                transition: color .13s ease-in-out;
+                cursor: pointer;
+
+                &:hover, &:focus {
+                    color: $blue;
+                }
+            }
+        }
+        .notification {
+            padding: 12px;
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: 42px calc(100% - 42px - 12px);
+            column-gap: 12px;
+            margin-bottom: 10px;
+
+            &.cl-3 {
+                grid-template-columns: 42px calc(100% - 42px - 24px - 42px) 42px;
+            }
+
+            &.unread {
+                background-color: $very-light-grayish-blue;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            .notifi-content {
+                h2, .content, span, a {
+                    font-size: 14px;
+                    display: inline;
+                }
+                h2, .content, span {
+                    color: $dark-grayish-blue;
+                }
+                .content {
+                    position: relative;
+                }
+                h2 {
+                    color: $very-dark-blue;
+                }
+
+                a.group {
+                    font-weight: 500;
+                    transition: font-weight .13s ease-in-out;
+                    &:hover, &:focus {
+                        font-weight: 800;
+                    }
+                }
+                a.post {
+                    font-weight: 800;
+                    color: $dark-grayish-blue;
+                    transition: color .13s ease-in-out;
+                    &:hover, &:focus {
+                        color: $blue;
+                    }
+                }
+
+                p span.unread {
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    background-color: $red;
+                    margin-left: 6px;
+                    margin-bottom: 2px;
+                    border-radius: 50%;
+                }
+                .when {
+                    margin-top: 2px;
+                    color: $grayish-blue;
+                }
+                .message-preview {
+                    padding: 12px;
+                    border-radius: 8px;
+                    margin-top: 10px;
+                    display: block;
+                    font-weight: 500;
+                    color: $dark-grayish-blue;
+                    border: 1px solid $light-grayish-blue-2;
+                    transition: background-color .13s ease-in-out;
+                    &:focus, &:hover {
+                        background-color: $light-grayish-blue-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding: 32px;
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (min-width: 650px) {
+    main {
+        .notifications-area {
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 30px $very-dark-blue-tt;
+        }
+    }
+}

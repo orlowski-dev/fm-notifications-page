@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/PlusJakartaSans.ttf");
+}
+* {
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans";
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: hsl(210, 60%, 98%);
+}
+
+p {
+  font-size: 14px;
+}
+
+h1, h2, h3 {
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: hsl(219, 85%, 26%);
+  transition: font-weight 0.13s ease-in-out;
+}
+a:hover, a:focus {
+  font-weight: 800;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+}
+
+main .notifications-area {
+  background-color: hsl(0, 0%, 100%);
+  padding: 30px 20px 15px;
+  max-width: 650px;
+  margin: 0 auto;
+}
+main .notifications-area header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+main .notifications-area header h1 {
+  font-size: 1.2rem;
+  color: hsl(224, 21%, 14%);
+}
+main .notifications-area header h1 .notification-badge {
+  display: inline-block;
+  background-color: hsl(219, 85%, 26%);
+  padding: 2px 10px;
+  border-radius: 6px;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.9rem;
+  margin-left: 6px;
+}
+main .notifications-area header button {
+  border: none;
+  background: none;
+  color: hsl(219, 12%, 42%);
+  font-size: 14px;
+  transition: color 0.13s ease-in-out;
+  cursor: pointer;
+}
+main .notifications-area header button:hover, main .notifications-area header button:focus {
+  color: hsl(219, 85%, 26%);
+}
+main .notifications-area .notification {
+  padding: 12px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 42px calc(100% - 42px - 12px);
+  column-gap: 12px;
+  margin-bottom: 10px;
+}
+main .notifications-area .notification.cl-3 {
+  grid-template-columns: 42px calc(100% - 42px - 24px - 42px) 42px;
+}
+main .notifications-area .notification.unread {
+  background-color: hsl(210, 60%, 98%);
+}
+main .notifications-area .notification img {
+  width: 100%;
+}
+main .notifications-area .notification .notifi-content h2, main .notifications-area .notification .notifi-content .content, main .notifications-area .notification .notifi-content span, main .notifications-area .notification .notifi-content a {
+  font-size: 14px;
+  display: inline;
+}
+main .notifications-area .notification .notifi-content h2, main .notifications-area .notification .notifi-content .content, main .notifications-area .notification .notifi-content span {
+  color: hsl(219, 12%, 42%);
+}
+main .notifications-area .notification .notifi-content .content {
+  position: relative;
+}
+main .notifications-area .notification .notifi-content h2 {
+  color: hsl(224, 21%, 14%);
+}
+main .notifications-area .notification .notifi-content a.group {
+  font-weight: 500;
+  transition: font-weight 0.13s ease-in-out;
+}
+main .notifications-area .notification .notifi-content a.group:hover, main .notifications-area .notification .notifi-content a.group:focus {
+  font-weight: 800;
+}
+main .notifications-area .notification .notifi-content a.post {
+  font-weight: 800;
+  color: hsl(219, 12%, 42%);
+  transition: color 0.13s ease-in-out;
+}
+main .notifications-area .notification .notifi-content a.post:hover, main .notifications-area .notification .notifi-content a.post:focus {
+  color: hsl(219, 85%, 26%);
+}
+main .notifications-area .notification .notifi-content p span.unread {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: hsl(1, 90%, 64%);
+  margin-left: 6px;
+  margin-bottom: 2px;
+  border-radius: 50%;
+}
+main .notifications-area .notification .notifi-content .when {
+  margin-top: 2px;
+  color: hsl(219, 14%, 63%);
+}
+main .notifications-area .notification .notifi-content .message-preview {
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: block;
+  font-weight: 500;
+  color: hsl(219, 12%, 42%);
+  border: 1px solid hsl(205, 33%, 90%);
+  transition: background-color 0.13s ease-in-out;
+}
+main .notifications-area .notification .notifi-content .message-preview:focus, main .notifications-area .notification .notifi-content .message-preview:hover {
+  background-color: hsl(211, 68%, 94%);
+}
+
+footer {
+  padding: 32px;
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  main .notifications-area {
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 30px hsla(224, 21%, 14%, 0.03);
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
